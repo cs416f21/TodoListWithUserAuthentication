@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Add new task
+{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    New Task
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Add a new task</h3>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="btn btn-primary my-3" type="submit"><i class="fas fa-save"></i> Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <a href="{% url 'index' %}" class="btn btn-warning btn-lg my-3"><i class="fas fa-eye"></i> View tasks</a>
+        </div>
+    </div>
+{% endblock %}

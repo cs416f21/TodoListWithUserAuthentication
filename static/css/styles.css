@@ -1,0 +1,12 @@
+body {
+    background-color: #fefefe;
+    padding-top: 50px;
+}
+
+.asteriskField {
+    display: none;
+}
+
+form > .alert > ul > li {
+    list-style: none;
+}
